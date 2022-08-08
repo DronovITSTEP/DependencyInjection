@@ -1,4 +1,4 @@
-﻿using DependencyInjection.Models;
+﻿/*using DependencyInjection.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using DependencyInjection.Repositories.Interfaces;
@@ -12,7 +12,7 @@ namespace DependencyInjection.Controllers
         //private ProductSum productSum;
 
         public HomeController(IRepository repository 
-            /*ProductSum pSum*/)
+            ProductSum pSum)
         {
             _repository = repository;
             //productSum = pSum;
@@ -40,4 +40,4 @@ namespace DependencyInjection.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
-}
+}*/

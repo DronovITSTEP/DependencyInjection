@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+/*
 //builder.Services.AddTransient<IRepository, Repository>();
 //builder.Services.AddTransient<IStorage, Storage>();
 
@@ -27,6 +27,13 @@ builder.Services.AddTransient<IRepository>(provider =>
 builder.Services.AddTransient<Repository>();
 
 builder.Services.AddTransient<ProductSum>();
+*/
+
+builder.Host.ConfigureAppConfiguration ((hostingContext, config) =>
+{
+    config.AddJsonFile("mysettings.json", optional: false, reloadOnChange: true);
+});
+builder.Services.Configure<Myjson>(builder.Configuration);
 
 var app = builder.Build();
 

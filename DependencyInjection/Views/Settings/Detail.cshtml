@@ -1,0 +1,12 @@
+﻿@inject IConfiguration Configuration
+
+<table class="table table-bordered table-sm table-striped">
+    <tr>
+        <td>Default</td>
+        <td>@Configuration["Logging:LogLevel:Default"]</td>
+    </tr>
+    <tr>
+        <td>Microsoft</td>
+        <td>@Configuration["Logging:LogLevel:Microsoft.AspNetCore"]</td>
+    </tr>
+</table>
